@@ -23,7 +23,7 @@ $(document).ready(function () {
             return false;
         } else if($('input[name="hobby"]:checked').length < 2){
             alert("2개 이상의 취미를 선택해주세요.")
-            in_hobby1.focus();
+            $('#hobby').focus();
             return false;
         } else if($('#post1').val().length < 3 || $('#post2').val().length < 3){
             alert("우편번호가 입력되지 않았습니다.")

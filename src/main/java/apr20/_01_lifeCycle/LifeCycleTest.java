@@ -27,7 +27,7 @@ public class LifeCycleTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.setContentType("text/html; charset=euc-kr"); 
+		response.setContentType("text/html; charset=utf-8"); 
 		response.getWriter().append("Served at: ").append(request.getContextPath()).append("\n")
 			.append("ID : ").append(request.getParameter("id")).append("\n")
 			.append("password : ").append(request.getParameter("passwd"));
