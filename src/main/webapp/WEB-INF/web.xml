@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
-	<context-param>
-		<description>로깅 여부</description>
-		<param-name>logEnabled</param-name>
-		<param-value>true</param-value>
-	</context-param>
-	<context-param>
-		<description>디버깅 레벨</description>
-		<param-name>debugLevel</param-name>
-		<param-value>5</param-value>
-	</context-param>
-	<context-param>
-		<description>색상 지정</description>
-		<param-name>color</param-name>
-		<param-value>orange</param-value>
-	</context-param>
+  <display-name>web-practice</display-name>
+  <!--  -->
+  <servlet>
+    <servlet-name>configTest</servlet-name>
+    <jsp-file>/apr24/_08_config/config.jsp</jsp-file>
+    <init-param>
+      <description>이름초기값</description>
+      <param-name>name</param-name>
+      <param-value>사랑이</param-value>
+    </init-param>
+    <init-param>
+      <param-name>age</param-name>
+      <param-value>20</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>configTest</servlet-name>
+    <url-pattern>/configTest</url-pattern>
+  </servlet-mapping>
+  <!--  -->
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <jsp-file>/apr24/test/loginTest.jsp</jsp-file>
+    <init-param>
+      <param-name>id</param-name>
+      <param-value>jsp</param-value>
+    </init-param>
+    <init-param>
+      <param-name>pass</param-name>
+      <param-value>jsp</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/apr24/login</url-pattern>
+  </servlet-mapping>
 </web-app>
