@@ -36,4 +36,25 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/apr24/login</url-pattern>
   </servlet-mapping>
+  <!-- 
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/ErrorPage/notFoundPage.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/ErrorPage/exception.jsp</location>
+  </error-page>
+   -->
+  	<jsp-config>
+	  <jsp-property-group>
+	    <url-pattern>*.html</url-pattern>
+	    <page-encoding>UTF-8</page-encoding>
+	  </jsp-property-group>
+	  <jsp-property-group>
+	    <url-pattern>*.jsp</url-pattern>
+	    <page-encoding>UTF-8</page-encoding>
+	  </jsp-property-group>
+	</jsp-config>
+	  
 </web-app>

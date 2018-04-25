@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>과제</title>
+</head>
+<link rel="stylesheet" href="validate.css" type="text/css">
+<script type="text/javascript" src="/web-practice/webjars/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="validate.js"></script>
+<body>
+    <fieldset>
+        <legend>회원가입양식</legend>
+        <form method="post" action="send.jsp" id="myForm">
+            <table>
+                <tr>
+                    <td><div>ID</div></td><td><input type="text" name="id" id="id"><input type="button" id="idCheckButton" value="ID중복검사"></td>
+                </tr>
+                <tr>
+                    <td><div>비밀번호</div></td><td><input type="password" name="pass" id="pass"></td>
+                </tr>
+                <tr>
+                    <td><div for="jumin1">주민등록번호</div></td>
+                    <td>
+                        <input type="text" name="jumin1" id="jumin1" maxlength="6">
+                        -
+                        <input type="password" name="jumin2" id="jumin2" maxlength="7">
+                    </td>
+                </tr>
+                <tr>
+                    <td><div for="email">E-Mail</div></td>
+                    <td>
+                        <input type="text" name="email" id="email">
+                        @
+                        <input type="text" name="domain" id="domain">
+                        <select name="sel" id="sel">
+                            <option value="">직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td><div for="male">성별</div></td>
+                    <td>
+                        <input type="radio" name="gender" id="gender1" value="m">남성
+                        <input type="radio" name="gender" id="gender2" value="f">여성
+                    </td>
+                </tr>
+                <tr><td><div for="">취미</div></td>
+                    <td>
+                        <input type="checkbox" name="hobby" id="hobby1" value="공부">공부
+                        <input type="checkbox" name="hobby" id="hobby2" value="게임">게임
+                        <input type="checkbox" name="hobby" id="hobby3" value="운동">운동
+                        <input type="checkbox" name="hobby" id="hobby4" value="등산">등산
+                        <input type="checkbox" name="hobby" id="hobby5" value="낚시">낚시
+                    </td>
+                </tr>
+                <tr><td><div for="">우편번호</div></td>
+                    <td>
+                        <input type="text" name="post1" id="post1" maxlength="3">
+                        -
+                        <input type="text" name="post2" id="post2" maxlength="3">
+                        <input type="button" id="postSearchButton" value="검색">
+                    </td>
+                </tr>
+                <tr><td><div for="">주소</div></td><td><input type="text" name="address" id="address"></td></tr>
+                <tr><td colspan="2"><div>자기소개</div><textarea name="introduce" id="introduce"></textarea></td></tr>
+                <tr><td colspan="2"><input type="submit" value="회원가입"><input type="reset" value="취소"></td></tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
