@@ -36,6 +36,23 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/apr24/login</url-pattern>
   </servlet-mapping>
+  <!--  -->
+  <servlet>
+    <servlet-name>login2</servlet-name>
+    <jsp-file>/apr27/_02_login/login.jsp</jsp-file>
+    <init-param>
+      <param-name>ID</param-name>
+      <param-value>jspProject</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Pass</param-name>
+      <param-value>1111</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login2</servlet-name>
+    <url-pattern>/apr27/_02_login/login</url-pattern>
+  </servlet-mapping>
   <!-- 
   <error-page>
   	<error-code>404</error-code>
