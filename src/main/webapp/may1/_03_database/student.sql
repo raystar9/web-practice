@@ -1,0 +1,11 @@
+DROP TABLE STUDENT;
+
+CREATE TABLE STUDENT(
+	num NUMBER,
+	name varchar(20),
+	primary key(num)
+	);
+
+SELECT * FROM STUDENT;
+
+DELETE FROM STUDENT;
