@@ -1,0 +1,20 @@
+fieldset {width:600px; margin: auto; padding:15px; font-family: "돋움"; background-color: #ecffea;}
+#myForm table {width: 600px; margin: auto; border-collapse: collapse}
+#myForm div {font-weight: bold;}
+#myForm tr {height: 50px; background-color: #d9ffd5;}
+#myForm tr>td:nth-child(2) {width:430px;}
+#myForm td {padding: 10px;  border: white solid 2px;}
+#myForm input[type="button"], #myForm input[type="submit"], #myForm input[type="reset"] {height:30px; font-size:11pt; background-color: rgb(255, 255, 217)}
+#myForm input[type="text"], #myForm input[type="password"], #introduce {background-color: #fbfffa; height:22px; font-size:12pt;}
+#id {width: 120px; margin-right: 20px}
+#pass {width: 130px;}
+#jumin1 {width:60px;}
+#jumin2 {width: 90px;}
+#email {width:120px;}
+#domain {width:120px;}
+#sel {height:30px; font-size:11pt;}
+#post1 {width:40px; text-align: center;}
+#post2 {width:40px; text-align: center;}
+#address {width:400px;}
+#introduce {width: 500px; height: 180px; margin:10px; resize: none;}
+#myForm input[type="submit"] {width:150px; margin-right: 50px;}
