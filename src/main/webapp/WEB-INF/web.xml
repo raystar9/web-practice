@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <display-name>web-practice</display-name>
-  <!--  -->
   <servlet>
     <servlet-name>configTest</servlet-name>
     <jsp-file>/apr24/_08_config/config.jsp</jsp-file>
@@ -19,7 +18,6 @@
     <servlet-name>configTest</servlet-name>
     <url-pattern>/configTest</url-pattern>
   </servlet-mapping>
-  <!--  -->
   <servlet>
     <servlet-name>login</servlet-name>
     <jsp-file>/apr24/test/loginTest.jsp</jsp-file>
@@ -36,7 +34,6 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/apr24/login</url-pattern>
   </servlet-mapping>
-  <!--  -->
   <servlet>
     <servlet-name>login2</servlet-name>
     <jsp-file>/apr27/_02_login/login.jsp</jsp-file>
@@ -53,25 +50,14 @@
     <servlet-name>login2</servlet-name>
     <url-pattern>/apr27/_02_login/login</url-pattern>
   </servlet-mapping>
-  <!-- 
-  <error-page>
-  	<error-code>404</error-code>
-  	<location>/ErrorPage/notFoundPage.jsp</location>
-  </error-page>
-  <error-page>
-  	<error-code>500</error-code>
-  	<location>/ErrorPage/exception.jsp</location>
-  </error-page>
-   -->
-  	<jsp-config>
-	  <jsp-property-group>
-	    <url-pattern>*.html</url-pattern>
-	    <page-encoding>UTF-8</page-encoding>
-	  </jsp-property-group>
-	  <jsp-property-group>
-	    <url-pattern>*.jsp</url-pattern>
-	    <page-encoding>UTF-8</page-encoding>
-	  </jsp-property-group>
-	</jsp-config>
-	  
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.html</url-pattern>
+      <page-encoding>UTF-8</page-encoding>
+    </jsp-property-group>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <page-encoding>UTF-8</page-encoding>
+    </jsp-property-group>
+  </jsp-config>
 </web-app>
