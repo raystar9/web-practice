@@ -43,4 +43,6 @@ public class DataPoster extends DataAccessor{
 		closeConnection();
 		return result;
 	}
+    
+    public int
 }

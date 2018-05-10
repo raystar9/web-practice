@@ -18,14 +18,14 @@ import may8.DataPoster;
 /**
  * Servlet implementation class BoardMain
  */
-@WebServlet("/board/get")
-public class BoardGet extends HttpServlet {
+@WebServlet("/board")
+public class BoardMain extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BoardGet() {
+    public BoardMain() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,15 +35,23 @@ public class BoardGet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String page = request.getParameter("page");
-		if(page == null) {
-			page = "1";
+		int page = 1;
+		int lastPage;
+		try {
+			page = Integer.parseInt(request.getParameter("page"));
+		} catch (NumberFormatException e){
+			page = 1;
+			System.out.println("page에 잘못된 값이 입력되었습니다.");
 		}
 		DataGetter getter = new DataGetter();
 		try {
-			ArrayList<Post> posts = (ArrayList<Post>) getter.getPost();
-			
+			ArrayList<Post> posts = (ArrayList<Post>) getter.getPostList(page);
+			int articleCount = getter.getArticleCount();
+			lastPage = (articleCount-1)/10 + 1;
+			request.setAttribute("articleCount", articleCount);
 			request.setAttribute("posts", posts);
+			request.setAttribute("page", page);
+			request.setAttribute("lastPage", lastPage);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/may9/_01_board/boardMain.jsp");
 			dispatcher.forward(request, response);
 		} catch (NamingException | SQLException e) {
